@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>weather-map</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <header>WEATHER APP</header>
+    </a>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-3">
+        <h3>search for city</h3>
+        <div class="form-inline form-group" ">
+            <input class=" form-control" id="searchCity" type="text" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0 " id="searchButton" type="submit">Search</button>
+    </div>
+    <ul class="searchHistoryGroup" id="history">
+    </ul>
+    </aside>
+    <div class="col-9">
+      <div class="todaysForcast" id="currentWeather">
+        <div class="card mb-5" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title display-4"><span id='city'>--</span> (<span id='currentDay'>- _ -</span>)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Temperature: <span id='temp'>-</span> F</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Humidity: <span id='humid'>-</span>%</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Wind speed: <span id='winspd'>-</span> MPH</h6>
+          </div>
+        </div>
+      </div>
+      <div class="futureForcast card-deck" id="fiveDaysForcast">
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
